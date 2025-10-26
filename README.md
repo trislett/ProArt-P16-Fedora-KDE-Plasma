@@ -1,7 +1,7 @@
 # ProArt-P16-Fedora-KDE-Plasma
 Issues/fixes getting linux to work on the Asus ProArt P16
 
-After the steps below, almost everything works. I haven't done exhaustive testing with battery life. You'll have the most issues with the graphics drivers. HDR works, I had no issues with HDMI output, and hybrid gpu settings also works. In general, I think the ProArt P16 is an amazing linux device with very few compromises.
+Following the steps below, nearly every feature works out of the box on Fedora KDE Plasma 42. I haven’t done extensive battery‐life testing yet. The primary issues were related to the graphics. However, HDR output functions flawlessly, HDMI output works without any issues, and the hybrid GPU switching is supported. Overall, the ProArt P16 is an excellent Linux device with very few compromises.
 
 Warning: A lot of this is from my bash history. I will try to make is as reproducible as possible.
 Of course, run sudo dnf update when necessary.
