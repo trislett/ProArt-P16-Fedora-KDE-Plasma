@@ -8,10 +8,12 @@ A lot of this is from my history. I will try to make is as reproducible as possi
 
 2. Installing asusctl and supergfxctl
 
-    sudo dnf copr enable lukenukem/asus-linux
-    sudo dnf install asusctl supergfxctl
-    sudo systemctl enable supergfxd.service
-    sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-    sudo systemctl start asusd.service 
-    sudo systemctl enable asusd.service
-    sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
+```
+sudo dnf copr enable lukenukem/asus-linux
+sudo dnf install asusctl supergfxctl
+sudo systemctl enable supergfxd.service
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo systemctl start asusd.service 
+sudo systemctl enable asusd.service
+sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
+```
