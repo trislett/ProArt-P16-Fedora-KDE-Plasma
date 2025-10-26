@@ -48,3 +48,9 @@ sudo dnf remove korganizer kmail akregator kaddressbook konversation kf5-akonadi
 ```
 toggle-hdr
 ```
+
+7. The nested ASUS Dial is not support. I don't really care abou this much. But, if it is a must for you check out:"
+
+```
+https://github.com/asus-linux-drivers/asus-dialpad-driver
+```
