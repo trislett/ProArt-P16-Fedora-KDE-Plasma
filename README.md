@@ -1,9 +1,12 @@
 # ProArt-P16-Fedora-KDE-Plasma
 Issues/fixes getting linux to work on the Asus ProArt P16
 
-A lot of this is from my history. I will try to make is as reproducible as possible.
+After the steps below, almost everything works. I haven't done exhaustive testing with battery life. You'll have the most issues with the graphics drivers. HDR works, I had no issues with HDMI output, and hybrid gpu settings also works. In general, I think the ProArt P16 is an amazing linux device with very few compromises.
 
-1. Give up on install arch, and install install Fedora. I couldn't get the graphics to display properly no matter what kernel I used. I was able to get past the black screen, but that's about it.
+Warning: A lot of this is from my bash history. I will try to make is as reproducible as possible.
+Of course, run sudo dnf update when necessary.
+
+1. Give up on trying to install arch, and install install Fedora KDE Plasma. I couldn't get the graphics to display properly no matter what kernel I used. I was able to get past the black screen, but that's about it.
   
 
 2. Installing asusctl and supergfxctl
@@ -12,18 +15,23 @@ A lot of this is from my history. I will try to make is as reproducible as possi
 sudo dnf copr enable lukenukem/asus-linux
 sudo dnf install asusctl supergfxctl
 sudo systemctl enable supergfxd.service
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 sudo systemctl start asusd.service 
 sudo systemctl enable asusd.service
 ```
 
-3. Enable KMS for the nvidia drivers (not sure if necessary).
+3. Enable RPM fusion for non-free drivers
+
+```
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+4. Enable KMS for the nvidia drivers (not sure if necessary).
 
 ```
 sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
 ```
 
-4. Set-up a larger swap file (optional)
+5. Set-up a larger swap file (optional)
 
 ```
 sudo rm -rf /swapfile 
@@ -31,25 +39,25 @@ sudo btrfs filesystem mkswapfile --size 24G /swapfile
 sudo swapon /swapfile
 ```
 
-4. Fix screen flicker. The screen will flicker black occassionally which is quite annoying. This was difficult to figure out, but it's due to the amdgpu not nvidia.
+6. Fix screen flicker. The screen will flicker black occassionally which is quite annoying. This was difficult to figure out, but it's due to the amdgpu not nvidia.
 The fix is to disable panel self refresh.
 ```
 sudo grubby --update-kernel=ALL --args="amdgpu.dcdebugmask=0x10"
 ```
 
-5. Remove bloated, unnecessay KDE tools (optional). These tools took a surprising amount of RAM.
+7. Remove bloated, unnecessay KDE tools (optional). These tools took a surprising amount of RAM.
 
 ```
 sudo dnf remove korganizer kmail akregator kaddressbook konversation kf5-akonadi-server mariadb-common
 ```
 
-6. (Partial fix) HDR error on wake. If are using HDR (recommendend), on wake the colors will be become over-saturated. As a band-aid fix, the toggle-hdr script turn HDR off and on fixing the color issue. If someone has less hacky solution, please share.
+8. (Partial fix) HDR error on wake. If are using HDR (recommendend), on wake the colors will be become over-saturated. As a band-aid fix, the toggle-hdr script turn HDR off and on fixing the color issue. If someone has less hacky solution, please share. 
 
 ```
 toggle-hdr
 ```
 
-7. The nested ASUS Dial is not support. I don't really care abou this much. But, if it is a must for you check out:
+9. The nested ASUS Dial is not support. I don't really care abou this much. But, if it is a must for you check out:
 
 ```
 https://github.com/asus-linux-drivers/asus-dialpad-driver
