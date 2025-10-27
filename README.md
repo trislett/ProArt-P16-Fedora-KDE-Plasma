@@ -15,6 +15,7 @@ Of course, run sudo dnf update when necessary.
 ```
 sudo dnf copr enable lukenukem/asus-linux
 sudo dnf install asusctl supergfxctl
+sudo systemctl start supergfxd.service 
 sudo systemctl enable supergfxd.service
 sudo systemctl start asusd.service 
 sudo systemctl enable asusd.service
