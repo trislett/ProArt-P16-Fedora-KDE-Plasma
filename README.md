@@ -45,7 +45,7 @@ sudo swapon /swapfile
 sudo grubby --update-kernel=ALL --args="amdgpu.dcdebugmask=0x10"
 ```
 
-7. Remove bloated, unnecessary KDE programs (optional). The akonadi integration took a surprising amount of RAM.
+7. Remove bloated, unnecessary KDE programs (optional). The akonadi integration takes a surprising amount of RAM.
 
 ```
 sudo dnf remove korganizer kmail akregator kaddressbook konversation kf5-akonadi-server mariadb-common
