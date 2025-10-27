@@ -1,0 +1,29 @@
+             .',;::::;,'.                 tris@fedora
+         .';:cccccccccccc:;,.             -----------
+      .;cccccccccccccccccccccc;.          OS: Fedora Linux 42 (KDE Plasma Desktop Edition) x86_64
+    .:cccccccccccccccccccccccccc:.        Host: ProArt P16 H7606WV_H7606WV (1.0)
+  .;ccccccccccccc;.:dddl:.;ccccccc;.      Kernel: Linux 6.17.4-200.fc42.x86_64
+ .:ccccccccccccc;OWMKOOXMWd;ccccccc:.     Uptime: 1 hour, 7 mins
+.:ccccccccccccc;KMMc;cc;xMMc;ccccccc:.    Packages: 2961 (rpm), 21 (flatpak)
+,cccccccccccccc;MMM.;cc;;WW:;cccccccc,    Shell: bash 5.2.37
+:cccccccccccccc;MMM.;cccccccccccccccc:    Display (SDC415D): 3840x2400 @ 60 Hz (as 2560x1600) in 16" [Built-in, HDR]
+:ccccccc;oxOOOo;MMM000k.;cccccccccccc:    DE: KDE Plasma 6.4.5
+cccccc;0MMKxdd:;MMMkddc.;cccccccccccc;    WM: KWin (Wayland)
+ccccc;XMO';cccc;MMM.;cccccccccccccccc'    WM Theme: Breeze
+ccccc;MMo;ccccc;MMW.;ccccccccccccccc;     Theme: Breeze (LayanLight) [Qt], Breeze [GTK3/4]
+ccccc;0MNc.ccc.xMMd;ccccccccccccccc;      Icons: Tela-circle [Qt], Tela-circle [GTK3/4]
+cccccc;dNMWXXXWM0:;cccccccccccccc:,       Font: Noto Sans (10pt) [Qt], Noto Sans (10pt) [GTK3/4]
+cccccccc;.:odl:.;cccccccccccccc:,.        Cursor: Vimix (24px)
+ccccccccccccccccccccccccccccc:'.          Terminal: konsole 25.8.2
+:ccccccccccccccccccccccc:;,..             CPU: AMD Ryzen AI 9 HX 370 (24) @ 5.16 GHz
+ ':cccccccccccccccc::;,.                  GPU 1: AMD Radeon 890M Graphics [Integrated]
+                                          GPU 2: NVIDIA GeForce RTX 4060 Max-Q / Mobile [Discrete]
+                                          Memory: 8.92 GiB / 30.41 GiB (29%)
+                                          Swap: 0 B / 32.00 GiB (0%)
+                                          Disk (/): 418.15 GiB / 952.28 GiB (44%) - btrfs
+                                          Local IP (wlp99s0): [redacted]
+                                          Battery (A32-K55): 97% [Charging, AC Connected]
+                                          Locale: en_CA.UTF-8
+
+                                                                  
+                                                                  
