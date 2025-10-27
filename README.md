@@ -35,7 +35,6 @@ sudo grubby --update-kernel=ALL --args="nvidia-drm.modeset=1"
 5. Set-up a larger swap file (optional)
 
 ```
-sudo rm -rf /swapfile 
 sudo btrfs filesystem mkswapfile --size 24G /swapfile
 sudo swapon /swapfile
 ```
