@@ -40,8 +40,7 @@ sudo btrfs filesystem mkswapfile --size 24G /swapfile
 sudo swapon /swapfile
 ```
 
-6. Fix screen flicker. The screen will flicker black occasionally, which is quite annoying. This was difficult to figure out, but it's due to the amdgpu driver. The fix is to disable panel self-refresh.
-The fix is to disable panel self refresh.
+6. Fix screen flicker. The screen will flicker black occasionally, which is quite annoying. This was difficult to figure out, but it's due to the amdgpu driver. It can be fixed by disabling panel self-refresh.
 ```
 sudo grubby --update-kernel=ALL --args="amdgpu.dcdebugmask=0x10"
 ```
